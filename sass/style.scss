@@ -1,11 +1,12 @@
-@import 'absctracts/_cores';
+@import 'abstracts/_cores';
+@import 'abstracts/_breakpoints';
 
 @import 'base/_normalize';
 @import 'base/_fontes';
 @import 'base/_meu-reset';
 
 @import 'layout/_container';
-@import 'layout/alinhamento-img';
+@import 'layout/_alinhamento-img';
 @import 'layout/_cabecalho';
 @import 'layout/_rodape';
 
