@@ -393,9 +393,25 @@ body {
 
 .cabecalho {
   background-color: #fff;
-  padding: 15px;
+  padding: 15px 0;
   position: fixed;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .cabecalho {
+    min-height: 100px;
+  }
+  .cabecalho .logo {
+    float: left;
+    margin-top: 10px;
+  }
+  .cabecalho .menu-principal {
+    float: right;
+    margin-top: 12px;
+  }
+  .cabecalho .menu-principal__lista {
+    margin-bottom: 0;
+  }
 }
 
 .rodape {
@@ -512,7 +528,7 @@ body {
 }
 
 .logo {
-  background-image: url(../img/logotipo-preto.png);
+  background-image: url(../../img/logotipo-preto.png);
   background-repeat: no-repeat;
   display: block;
   width: 120px;
@@ -522,7 +538,7 @@ body {
 }
 
 .logo--branco {
-  background-image: url(../img/logotipo-branco.png);
+  background-image: url(../../img/logotipo-branco.png);
   margin-bottom: 40px;
 }
 
@@ -548,8 +564,8 @@ body {
   text-indent: -9999px;
   background-color: #fff;
   background-image: url(../img/menuprincipal-btn-bg.png);
+  background-position: -48px 7px;
   background-repeat: no-repeat;
-  background-position: 5px 5px;
   border: 2px solid #c4c4c4;
   border-radius: 5px;
   cursor: pointer;
@@ -557,16 +573,21 @@ body {
   top: 15px;
   right: 15px;
 }
-
-.menu-principal__btn--fechar {
-  background-position: -48px 7px;
+@media (min-width: 768px) {
+  .menu-principal__btn {
+    display: none;
+  }
 }
-
 .menu-principal__lista {
   padding: 0px;
   list-style: none;
 }
-
+@media (min-width: 768px) {
+  .menu-principal__lista li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
 .menu-principal__item {
   text-decoration: none;
   font-weight: bold;
@@ -575,7 +596,6 @@ body {
   display: block;
   font-size: 18px;
 }
-
 .menu-principal__item--atual {
   color: hsl(0deg, 89%, 61%);
   text-decoration: none;
@@ -583,6 +603,19 @@ body {
   margin-bottom: 20px;
   display: block;
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  .menu-principal--fechado .menu-principal {
+    background-position: 5px 5px;
+  }
+  .menu-principal--fechado .menu-principal__lista {
+    margin: 0;
+  }
+  .menu-principal--fechado .menu-principal__item {
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 .pagina-cabecalho {
